@@ -88,7 +88,7 @@ class LinkedList(Node):
             temp = self.get(index-1)
             node.next = temp.next
             temp.next = node
-        self.length += 1
+            self.length += 1
         return True
 
     def remove(self, index):
@@ -103,14 +103,15 @@ class LinkedList(Node):
             temp = prev.next
             prev.next = temp.next
             temp.next = None
-        self.length -= 1
+            self.length -= 1
+        return True
 
     def reverse(self):
         temp = self.head
         self.head = self.tail
         self.tail = temp
         before = None
-        for _ in range(self.length+1):
+        for _ in range(self.length):
             after = temp.next
             temp.next = before
             before = temp
