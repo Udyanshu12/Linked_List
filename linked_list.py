@@ -16,7 +16,7 @@ class LinkedList(Node):
             temp = temp.next
 
     def append(self, node):
-        if self.head == None:
+        if self.head is None:
             self.head = node
             self.tail = node
         else:
@@ -26,7 +26,7 @@ class LinkedList(Node):
         return True
 
     def pop(self):
-        if self.head == None:
+        if self.head is None:
             return None
         temp = self.head
         pre = self.head
@@ -42,7 +42,7 @@ class LinkedList(Node):
         return temp
 
     def prepend(self, node):
-        if self.head == None:
+        if self.head is None:
             self.tail = node
             self.head = node
         else:
@@ -52,7 +52,7 @@ class LinkedList(Node):
         return True
 
     def pop_first(self):
-        if self.head == None:
+        if self.head is None:
             return None
         temp = self.head
         self.head = self.head.next
